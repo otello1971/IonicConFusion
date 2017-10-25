@@ -35,9 +35,6 @@ export class FavoriteProvider {
   }
 
   getFavorites(): Observable<Dish[]> {
-    //return this.dishservice.getDishes()
-    //.map(dishes => dishes.filter(dish => this.favorites.some(el => el === dish.id)));
-
     return this.dishservice.getDishes().map(v => v.reduce((acc, x) => 
        this.favorites.reduce((acc2, y) => acc2 || (y === x.id), false) ? [...acc, x]: acc, []));
   }
