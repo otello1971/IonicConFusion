@@ -18,38 +18,39 @@
 
 <ion-content>
 
-    <ion-card>
-        <ion-card-header color="primary">
-          Location Information
-        </ion-card-header>
-        <ion-card-content>
-          <address>
-            121, Clear Water Bay Road<br>
-            Clear Water Bay, Kowloon<br>
-            HONG KONG<br>
-            <ion-icon name="call" item-left></ion-icon> : +852 1234 5678<br>
-            <ion-icon name="print" item-left></ion-icon> : +852 8765 4321<br>
-            <ion-icon name="mail" item-left></ion-icon> : confusion@food.net     
-          </address>  
-          
-          <ion-row>
-              <ion-col>
-                <a ion-button icon-left clear
-                  href="tel:+85212345678">
-                  <ion-icon name="call"></ion-icon>
-                  <div>Call</div>
-              </a>
-              </ion-col>
-              <ion-col>
-                <a ion-button icon-left clear
-                  href="mailto:confusion@food.net">
-                  <ion-icon name="mail"></ion-icon>
-                  <div>Email</div>
-              </a>
-              </ion-col>
-            </ion-row>
+  <ion-card>
+    <ion-card-header color="primary">
+      Location Information
+    </ion-card-header>
+    <ion-card-content>
+      <address>
+        121, Clear Water Bay Road
+        <br> Clear Water Bay, Kowloon
+        <br> HONG KONG
+        <br>
+        <ion-icon name="call" item-left></ion-icon> : +852 1234 5678
+        <br>
+        <ion-icon name="print" item-left></ion-icon> : +852 8765 4321
+        <br>
+        <ion-icon name="mail" item-left></ion-icon> : confusion@food.net
+      </address>
 
-        </ion-card-content>
-      </ion-card>
+      <ion-row>
+        <ion-col>
+          <a ion-button icon-left clear small href="tel:+85212345678">
+            <ion-icon name="call"></ion-icon>
+            <div>Call</div>
+          </a>
+        </ion-col>
+        <ion-col>
+          <button ion-button icon-left clear small (click)="sendEmail()">
+            <ion-icon name="mail"></ion-icon>
+            <div>Email</div>
+          </button>
+        </ion-col>
+      </ion-row>
+
+    </ion-card-content>
+  </ion-card>
 
 </ion-content>

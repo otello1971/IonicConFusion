@@ -39,6 +39,13 @@ export class FavoriteProvider {
       this.favorites.push(id);
       this.storage.set('favorites', this.favorites);  //adds favorites to local storage
     }
+
+    // Schedule a single notification
+    this.localNotifications.schedule({
+      id: id,
+      text: 'Dish ' + id + ' added as a favorite successfully'
+    });
+
     console.log('favorites', this.favorites);
     return true;
   }
