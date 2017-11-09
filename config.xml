@@ -95,4 +95,5 @@
         <variable name="XWALK_MULTIPLEAPK" value="true" />
     </plugin>
     <plugin name="cordova-plugin-email" spec="^1.2.6" />
+    <plugin name="cordova-plugin-x-socialsharing" spec="^5.2.1" />
 </widget>
