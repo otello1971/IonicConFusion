@@ -68,6 +68,28 @@ export class RegisterPage {
     });
   }
 
+  getFromLibrary(){
+    const options: CameraOptions = {
+      sourceType: this.camera.PictureSourceType.PHOTOLIBRARY, 
+      quality: 100,
+      targetHeight: 100,
+      targetWidth: 100,
+      allowEdit: true,
+      destinationType: this.camera.DestinationType.DATA_URL,
+      encodingType: this.camera.EncodingType.JPEG,
+      mediaType: this.camera.MediaType.PICTURE
+    }
+
+    this.camera.getPicture(options).then((imageData) => {
+
+      this.image = 'data:image/jpeg;base64,' + imageData;
+      console.log(imageData);
+    }, (err) => {
+        this.image ='assets/images/logo.png';
+        console.log('Error obtaining picture from album')
+    });
+  }
+
   onSubmit() {
     console.log(this.registerForm.value);
     this.dismiss();
